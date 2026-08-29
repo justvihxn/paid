@@ -2169,8 +2169,6 @@ class ManageView(discord.ui.View):
         start_button.callback = lambda inter: self.action_callback(inter, 'start')
         stop_button = discord.ui.Button(label="⏸ Stop", style=discord.ButtonStyle.secondary)
         stop_button.callback = lambda inter: self.action_callback(inter, 'stop')
-        ssh_button = discord.ui.Button(label="🔑 SSH", style=discord.ButtonStyle.primary)
-        ssh_button.callback = lambda inter: self.action_callback(inter, 'tmate')
         sshx_button = discord.ui.Button(label="🌐 SSHX", style=discord.ButtonStyle.primary)
         sshx_button.callback = lambda inter: self.action_callback(inter, 'sshx')
         stats_button = discord.ui.Button(label="📊 Stats", style=discord.ButtonStyle.secondary)
