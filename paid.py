@@ -47,10 +47,10 @@ EXPIRATION_WARNING_DAYS = int(os.getenv('EXPIRATION_WARNING_DAYS', '1'))
 #   DEPLOY_DISK=80                      (GB disk per deployed VPS)
 #   VPS_DEPLOY_LIMIT=2                  (max VPS per user via !deploy — users cannot create more than this)
 #   DEPLOY_SLOT=2                       (total global VPS slot cap across ALL users, 0 = unlimited)
-DEPLOY_ROLE_ID = int(os.getenv('DEPLOY_ROLE_ID', '0'))
+DEPLOY_ROLE_ID = int(os.getenv('DEPLOY_ROLE_ID', '1540619482328993804'))
 DEPLOY_RAM     = int(os.getenv('DEPLOY_RAM',  '15'))
 DEPLOY_CPU     = int(os.getenv('DEPLOY_CPU',  '6'))
-DEPLOY_DISK    = int(os.getenv('DEPLOY_DISK', '50'))
+DEPLOY_DISK    = int(os.getenv('DEPLOY_DISK', '60'))
 # VPS_DEPLOY_LIMIT = max VPS a single user can create via !deploy
 # Supports both VPS_DEPLOY_LIMIT (new) and DEPLOY_LIMIT (old) — VPS_DEPLOY_LIMIT takes priority
 DEPLOY_LIMIT   = int(os.getenv('VPS_DEPLOY_LIMIT', os.getenv('DEPLOY_LIMIT', '1')))
