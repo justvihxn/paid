@@ -1826,39 +1826,10 @@ class OSSelectView(discord.ui.View):
             add_field(dm_embed, "📊 VPS Details", vps_details.strip(), False)
             
             # Get all network interfaces - with timeout to prevent hanging
-            try:
-                networks = await asyncio.wait_for(
-                    get_container_networks(container_name, self.node_id),
-                    timeout=3.0
-                )
-            except asyncio.TimeoutError:
-                logger.warning(f"Timeout getting networks for {container_name}")
-                networks = {}
-            
-            if networks:
-                # Format SSH access info with all real interfaces
-                ssh_access_info = "**🖥️ Available Connection Points:**\n"
-                for interface, ip in sorted(networks.items()):
-                    ssh_access_info += f"└─ **{interface}:** `ssh root@{ip}`\n"
-                ssh_access_info += f"\n**🔑 Login Credentials:**\n"
-                ssh_access_info += f"**Username:** `root`\n"
-                ssh_access_info += f"**Password:** `{root_password}`\n"
-                ssh_access_info += f"\n**⚠️ Important:** Save this password securely!"
-            else:
-                # If no interfaces found, still show credentials (important!)
-                ssh_access_info = "**🔑 Login Credentials:**\n"
-                ssh_access_info += f"**Username:** `root`\n"
-                ssh_access_info += f"**Password:** `{root_password}`\n"
-                ssh_access_info += f"\n**📡 Network Setup:**\n"
-                ssh_access_info += "Your VPS is initializing its network interfaces.\n"
-                ssh_access_info += "They will be available in a few seconds.\n"
-                ssh_access_info += f"\n**⚠️ Important:** Save this password securely!"
-            
-            add_field(dm_embed, "🔐 SSH Credentials & Access", ssh_access_info, False)
+ 
             
             # SSH Features
-            features_info = """✅ **SSH:** Password authentication enabled
-✅ **SFTP:** File transfer available
+            features_info = """✅ **SFTP:** File transfer available
 ✅ **Root:** Full root access granted
 ✅ **Ports:** All ports available for forwarding
 ✅ **Docker:** Nesting, privileged mode, FUSE enabled
@@ -1868,7 +1839,7 @@ class OSSelectView(discord.ui.View):
             # Support Section
             support_info = f"""**Need Help?**
 • Use `{PREFIX}manage` to start/stop/reinstall your VPS
-• Click 🔐 in manage to regenerate password
+• Click SSHX in manage to regenerate link
 • Contact admin for issues or upgrades
 • Check logs with: `journalctl -xe`"""
             add_field(dm_embed, "📞 Support & Management", support_info, False)
