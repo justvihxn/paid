@@ -1650,7 +1650,7 @@ async def my_vps(ctx):
             inline=False
         )
 
-    embed.set_footer(text=f"Made by Hopingboyz • VPS Control Panel")
+    embed.set_footer(text=f"Justvihxn VPS • VPS Control Panel")
     embed.timestamp = ctx.message.created_at
 
     await ctx.send(embed=embed)
