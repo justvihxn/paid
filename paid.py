@@ -6188,7 +6188,7 @@ async def deploy_cmd(ctx):
     # Check role
     role_ids = [r.id for r in ctx.author.roles]
     if DEPLOY_ROLE_ID not in role_ids and str(ctx.author.id) != str(MAIN_ADMIN_ID):
-        await ctx.send(embed=create_error_embed("Access Denied", "You don't have the required role to deploy a VPS."))
+        await ctx.send(embed=create_error_embed("Access Denied", "You Need To Join https://dsc.gg/justvihxn to deploy a VPS!0"))
         return
 
     # Prevent duplicate in-flight deploys
