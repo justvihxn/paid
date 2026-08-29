@@ -6145,8 +6145,8 @@ async def _do_free_deploy(ctx, user: discord.Member, os_version: str, node_id: i
         pub_embed.add_field(name="Node", value=node['name'] if node else "Unknown", inline=True)
         if ssh_host_port:
             pub_embed.add_field(
-                name="🌐 SSH",
-                value=f"`ssh root@{YOUR_SERVER_IP} -p {ssh_host_port}`",
+                name="🌐 SSHX",
+                value=f"`Use !manage,then click SSHX`",
                 inline=False
             )
         await ctx.send(embed=pub_embed)
@@ -6188,7 +6188,7 @@ async def deploy_cmd(ctx):
     # Check role
     role_ids = [r.id for r in ctx.author.roles]
     if DEPLOY_ROLE_ID not in role_ids and str(ctx.author.id) != str(MAIN_ADMIN_ID):
-        await ctx.send(embed=create_error_embed("Access Denied", "You Need To Join https://dsc.gg/justvihxn to deploy a VPS!0"))
+        await ctx.send(embed=create_error_embed("Access Denied", "You Need To Join https://dsc.gg/justvihxn to deploy a VPS!"))
         return
 
     # Prevent duplicate in-flight deploys
