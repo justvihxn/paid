@@ -2146,7 +2146,7 @@ class ManageView(discord.ui.View):
         stats_button.callback = lambda inter: self.action_callback(inter, 'stats')
         self.add_item(start_button)
         self.add_item(stop_button)
-        self.add_item(ssh_button)
+        
         self.add_item(sshx_button)
         self.add_item(stats_button)
 
