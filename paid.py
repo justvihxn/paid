@@ -670,7 +670,7 @@ def create_embed(title, description="", color=COLOR_PRIMARY):
     )
     embed.set_thumbnail(url=BOT_THUMBNAIL_URL)
     embed.set_footer(
-        text=f"Made by Hopingboyz • v{BOT_VERSION} • {datetime.now().strftime('%H:%M:%S')}",
+        text=f"Justvihxn VPS • v{BOT_VERSION} • {datetime.now().strftime('%H:%M:%S')}",
         icon_url=BOT_ICON_URL
     )
     embed.timestamp = datetime.now()
