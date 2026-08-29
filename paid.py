@@ -6122,8 +6122,8 @@ async def _do_free_deploy(ctx, user: discord.Member, os_version: str, node_id: i
             # Main VPS public IP + forwarded port → connects to container SSH
             ssh_info += (
                 f"**SSH Command:**\n"
-                f"`ssh root@{YOUR_SERVER_IP} -p {ssh_host_port}`\n\n"
-                f"*(Port {ssh_host_port} on host `{YOUR_SERVER_IP}` is forwarded to your container)*\n\n"
+                f"`Use SSHX in !manage to connect to server`\n\n"
+               
             )
         else:
             ssh_info += (
@@ -6146,7 +6146,7 @@ async def _do_free_deploy(ctx, user: discord.Member, os_version: str, node_id: i
         if ssh_host_port:
             pub_embed.add_field(
                 name="🌐 SSHX",
-                value=f"`Use !manage,then click SSHX`",
+                value=f"`Use !manage,then click sshx`",
                 inline=False
             )
         await ctx.send(embed=pub_embed)
