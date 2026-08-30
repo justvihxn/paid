@@ -27,7 +27,7 @@ BOT_NAME = os.getenv('BOT_NAME', 'Justvihxn')
 PREFIX = os.getenv('PREFIX', '!')
 YOUR_SERVER_IP = os.getenv('127.0.0.1')
 MAIN_ADMIN_ID = int(os.getenv('MAIN_ADMIN_ID', '1426918952906522786'))
-VPS_USER_ROLE_ID = int(os.getenv('VPS_USER_ROLE_ID', '1543131772764684399'))
+VPS_USER_ROLE_ID = int(os.getenv('VPS_USER_ROLE_ID', '0'))
 DEFAULT_STORAGE_POOL = os.getenv('DEFAULT_STORAGE_POOL', 'default')
 HOST_MOTD = os.getenv('HOST_MOTD', '')
 BOT_VERSION = os.getenv('BOT_VERSION', 'Follow')
@@ -53,7 +53,7 @@ DEPLOY_CPU     = int(os.getenv('DEPLOY_CPU',  '6'))
 DEPLOY_DISK    = int(os.getenv('DEPLOY_DISK', '60'))
 # VPS_DEPLOY_LIMIT = max VPS a single user can create via !deploy
 # Supports both VPS_DEPLOY_LIMIT (new) and DEPLOY_LIMIT (old) — VPS_DEPLOY_LIMIT takes priority
-DEPLOY_LIMIT   = int(os.getenv('VPS_DEPLOY_LIMIT', os.getenv('DEPLOY_LIMIT', '1')))
+DEPLOY_LIMIT   = int(os.getenv('VPS_DEPLOY_LIMIT', os.getenv('DEPLOY_LIMIT', '0')))
 DEPLOY_SLOT    = int(os.getenv('DEPLOY_SLOT', '0'))
 
 # SSH Configuration
