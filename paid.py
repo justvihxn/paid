@@ -6151,7 +6151,7 @@ async def deploy_cmd(ctx):
 
     # Check if deploy is configured
     if DEPLOY_ROLE_ID == 0:
-        await ctx.send(embed=create_error_embed("Not Configured", "Self-service deploy is not enabled. Contact an admin."))
+        await ctx.send(embed=create_error_embed("Not Configured", "Deploy Command Has Been Stopped To Save Resources For Existing Users."))
         return
 
     # Check role
