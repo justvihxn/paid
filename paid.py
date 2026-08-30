@@ -6151,7 +6151,7 @@ async def deploy_cmd(ctx):
 
     # Check if deploy is configured
     if DEPLOY_ROLE_ID == 0:
-        await ctx.send(embed=create_error_embed("Not Configured", "Deploy Command Has Been Stopped To Save Resources For Existing Users."))
+        await ctx.send(embed=create_error_embed("100% Free VPS are turned Off ❌", "Join https://dsc.gg/justvihxn and invite 2 people or pay 5 inr for a free vps right now"))
         return
 
     # Check role
